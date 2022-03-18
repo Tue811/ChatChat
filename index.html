@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat App</title>
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap');
+    body {
+      font-family: 'Roboto', sans-serif;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background: url("https://i.pinimg.com/236x/88/aa/79/88aa79731cbfb05c3251904e130b11c9.jpg");
+    }
+
+    #message-container {
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    #message-container div {
+      background-color: pink;
+      padding: 5px;
+    }
+
+    #message-container div:nth-child(2n) {
+      background-color: #FFF;
+    }
+
+    #send-container {
+      position: fixed;
+      padding-bottom: 0px;
+      bottom: 0;
+      background-color: white;
+      max-width: 1200px;
+      width: 80%;
+      display: flex;
+    }
+
+    #message-input {
+      flex-grow: 1;
+    }
+
+    button{
+      background: pink;
+    }
+    .title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background: #F4DCD6;
+      font-family: 'Roboto', sans-serif;
+      border-radius: 20px;
+      font-weight: 900;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class ="title">
+    <h1>TUỆ VÀ NHỮNG NGƯỜI BẠN </h1>
+  </div>
+  <div id="message-container"></div>
+  <form id="send-container">
+    <input type="text" id="message-input">
+    <button type="submit" id="send-button" >Send</button>
+  </form>
+</body>
+</html>
